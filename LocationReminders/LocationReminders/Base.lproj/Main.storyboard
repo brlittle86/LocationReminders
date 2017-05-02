@@ -91,12 +91,40 @@
                     <view key="view" contentMode="scaleToFill" id="usW-vM-8Yi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reminder Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkM-dw-uMc">
+                                <rect key="frame" x="120" y="144" width="135" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Radius" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zsc-GR-neb">
+                                <rect key="frame" x="135" y="219" width="105" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zsc-GR-neb" firstAttribute="top" secondItem="dkM-dw-uMc" secondAttribute="bottom" constant="45" id="1gf-MD-aeS"/>
+                            <constraint firstItem="dkM-dw-uMc" firstAttribute="centerX" secondItem="usW-vM-8Yi" secondAttribute="centerX" id="5n3-6O-5af"/>
+                            <constraint firstItem="Zsc-GR-neb" firstAttribute="centerX" secondItem="usW-vM-8Yi" secondAttribute="centerX" id="A64-n0-Gh1"/>
+                            <constraint firstAttribute="trailing" secondItem="Zsc-GR-neb" secondAttribute="trailing" constant="135" id="LsV-OE-JNM"/>
+                            <constraint firstItem="dkM-dw-uMc" firstAttribute="top" secondItem="Zcw-vd-hKX" secondAttribute="bottom" constant="80" id="U49-K2-p1L"/>
+                            <constraint firstAttribute="trailing" secondItem="dkM-dw-uMc" secondAttribute="trailing" constant="120" id="iPs-8e-Z6L"/>
+                            <constraint firstItem="Zsc-GR-neb" firstAttribute="leading" secondItem="usW-vM-8Yi" secondAttribute="leading" constant="135" id="rXB-Fw-wAx"/>
+                            <constraint firstItem="dkM-dw-uMc" firstAttribute="leading" secondItem="usW-vM-8Yi" secondAttribute="leading" constant="120" id="tNQ-0B-14e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reminderName" destination="dkM-dw-uMc" id="7DS-Rc-aUq"/>
+                        <outlet property="reminderRadius" destination="Zsc-GR-neb" id="RUQ-hu-ILP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8q-5Y-Yd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="38"/>
+            <point key="canvasLocation" x="1960.8" y="37.331334332833585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gqy-7L-F0K">
