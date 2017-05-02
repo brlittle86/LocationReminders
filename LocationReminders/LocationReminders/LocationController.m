@@ -22,7 +22,32 @@
 - (id)init {
     self = [super init];
     
+    if (self){
+        [self requestPermissions];
+    }
+    
+    self.locationManager.delegate = self;
+    
     return self;
+}
+
+- (void)requestPermissions {
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = 100; //meters
+    
+    [self.locationManager requestAlwaysAuthorization];
+    
+    [self.locationManager startUpdatingLocation];
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    CLLocation *location = locations.lastObject;
+    [self.delegate locationControllerUpdatedLocation:location];
+    
 }
 
 @end

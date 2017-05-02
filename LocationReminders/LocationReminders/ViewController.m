@@ -10,14 +10,14 @@
 
 #import "AddReminderViewController.h"
 #import "LocationControllerDelegate.h"
+#import "LocationController.h"
 
 @import Parse;
 @import MapKit;
 
-@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, LocationControllerDelegate>
+@interface ViewController () <MKMapViewDelegate, LocationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -25,25 +25,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self requestPermissions];
     
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+    
+    LocationController *locationController = [LocationController sharedLocationController];
+    locationController.delegate = self;
 }
 
-- (void)requestPermissions {
-    
-    self.locationManager = [[CLLocationManager alloc]init];
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.distanceFilter = 100; //meters
-    
-    self.locationManager.delegate = self;
-    
-    [self.locationManager requestAlwaysAuthorization];
-    
-    [self.locationManager startUpdatingLocation];
-    
-}
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
@@ -108,16 +98,6 @@
     
 }
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-    
-    CLLocation *location = locations.lastObject;
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location.coordinate, 400, 400);
-    
-    [self.mapView setRegion:region animated:YES];
-    
-}
-
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
@@ -151,6 +131,10 @@
 }
 
 -(void)locationControllerUpdatedLocation:(CLLocation *)location{
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location.coordinate, 400, 400);
+    
+    [self.mapView setRegion:region animated:YES];
     
 }
 
