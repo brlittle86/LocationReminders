@@ -18,6 +18,8 @@
 		713A92AA1EB7B649009C2413 /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 713A92A51EB7B638009C2413 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		713A92AB1EB7B649009C2413 /* Parse.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 713A92A61EB7B638009C2413 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		713A92B01EB7C0C2009C2413 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713A92AF1EB7C0C2009C2413 /* MapKit.framework */; };
+		713A92B31EB8FF1F009C2413 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92B21EB8FF1F009C2413 /* AddReminderViewController.m */; };
+		713A92B61EB9221C009C2413 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92B51EB9221C009C2413 /* LocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +52,10 @@
 		713A92A51EB7B638009C2413 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		713A92A61EB7B638009C2413 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		713A92AF1EB7C0C2009C2413 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		713A92B11EB8FF1F009C2413 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
+		713A92B21EB8FF1F009C2413 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
+		713A92B41EB9221C009C2413 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		713A92B51EB9221C009C2413 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 		713A92AC1EB7B854009C2413 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				713A92B11EB8FF1F009C2413 /* AddReminderViewController.h */,
+				713A92B21EB8FF1F009C2413 /* AddReminderViewController.m */,
 				713A928C1EB7ACF6009C2413 /* ViewController.h */,
 				713A928D1EB7ACF6009C2413 /* ViewController.m */,
 			);
@@ -128,6 +136,8 @@
 		713A92AD1EB7B85D009C2413 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				713A92B41EB9221C009C2413 /* LocationController.h */,
+				713A92B51EB9221C009C2413 /* LocationController.m */,
 				713A92891EB7ACF6009C2413 /* AppDelegate.h */,
 				713A928A1EB7ACF6009C2413 /* AppDelegate.m */,
 			);
@@ -221,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713A92B61EB9221C009C2413 /* LocationController.m in Sources */,
+				713A92B31EB8FF1F009C2413 /* AddReminderViewController.m in Sources */,
 				713A928E1EB7ACF6009C2413 /* ViewController.m in Sources */,
 				713A928B1EB7ACF6009C2413 /* AppDelegate.m in Sources */,
 				713A92881EB7ACF6009C2413 /* main.m in Sources */,
