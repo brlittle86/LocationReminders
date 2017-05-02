@@ -37,14 +37,26 @@
 - (IBAction)location1Pressed:(id)sender {
     
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(47.6566674, -122.351096);
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 500.0, 500.0);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 400.0, 400.0);
     
     [self.mapView setRegion:region animated:YES];
     
 }
 - (IBAction)location2Pressed:(id)sender {
+    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(48.025609, -122.142059);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 400.0, 400.0);
+    
+    [self.mapView setRegion:region animated:YES];
+    
 }
 - (IBAction)location3Pressed:(id)sender {
+    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(34.515446, -110.120860);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 400.0, 400.0);
+    
+    [self.mapView setRegion:region animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
