@@ -10,4 +10,19 @@
 
 @implementation LocationController
 
++ (id)sharedLocationController {
+    static LocationController *sharedLocationController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedLocationController = [[self alloc] init];
+    });
+    return sharedLocationController;
+}
+
+- (id)init {
+    self = [super init];
+    
+    return self;
+}
+
 @end

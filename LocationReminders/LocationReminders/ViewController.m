@@ -9,11 +9,12 @@
 #import "ViewController.h"
 
 #import "AddReminderViewController.h"
+#import "LocationControllerDelegate.h"
 
 @import Parse;
 @import MapKit;
 
-@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, LocationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -149,5 +150,8 @@
     
 }
 
+-(void)locationControllerUpdatedLocation:(CLLocation *)location{
+    
+}
 
 @end

@@ -56,6 +56,7 @@
 		713A92B21EB8FF1F009C2413 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
 		713A92B41EB9221C009C2413 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		713A92B51EB9221C009C2413 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		713A92B71EB9241E009C2413 /* LocationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 			children = (
 				713A92B41EB9221C009C2413 /* LocationController.h */,
 				713A92B51EB9221C009C2413 /* LocationController.m */,
+				713A92B71EB9241E009C2413 /* LocationControllerDelegate.h */,
 				713A92891EB7ACF6009C2413 /* AppDelegate.h */,
 				713A928A1EB7ACF6009C2413 /* AppDelegate.m */,
 			);
