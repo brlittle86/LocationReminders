@@ -22,6 +22,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self prepareNavigationBarDoneButton];
+    
+}
+
+- (void)prepareNavigationBarDoneButton{
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(popViewControllerAnimated:)];
+    
+    [[self navigationItem] setRightBarButtonItem:doneButton];
+}
+
+- (void)doneButtonPressed{
     Reminder *newReminder = [Reminder object];
     
     newReminder.name = self.annotationTitle;

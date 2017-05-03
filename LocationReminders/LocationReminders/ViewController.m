@@ -60,6 +60,15 @@
         
     }
     
+    PFQuery *query = [PFQuery queryWithClassName:@"Reminder"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error Fetching Reminder %@", error.localizedDescription);
+        } else {
+            NSLog(@"%@", objects);
+        }
+    }];
+    
 }
 
 -(void)reminderSavedToParse:(id)sender{
