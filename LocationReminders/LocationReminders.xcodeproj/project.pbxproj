@@ -20,6 +20,8 @@
 		713A92B01EB7C0C2009C2413 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713A92AF1EB7C0C2009C2413 /* MapKit.framework */; };
 		713A92B31EB8FF1F009C2413 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92B21EB8FF1F009C2413 /* AddReminderViewController.m */; };
 		713A92B61EB9221C009C2413 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92B51EB9221C009C2413 /* LocationController.m */; };
+		713A92BA1EBA465D009C2413 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92B91EBA465D009C2413 /* Reminder.m */; };
+		713A92BC1EBA5E6F009C2413 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713A92BB1EBA5E6F009C2413 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +49,6 @@
 		713A92921EB7ACF6009C2413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713A92951EB7ACF6009C2413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713A92971EB7ACF6009C2413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		713A929E1EB7B2D7009C2413 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
-		713A929F1EB7B2D7009C2413 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		713A92A51EB7B638009C2413 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		713A92A61EB7B638009C2413 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		713A92AF1EB7C0C2009C2413 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +57,9 @@
 		713A92B41EB9221C009C2413 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		713A92B51EB9221C009C2413 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		713A92B71EB9241E009C2413 /* LocationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationControllerDelegate.h; sourceTree = "<group>"; };
+		713A92B81EBA465D009C2413 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		713A92B91EBA465D009C2413 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		713A92BB1EBA5E6F009C2413 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			files = (
 				713A92A71EB7B638009C2413 /* Bolts.framework in Frameworks */,
 				713A92B01EB7C0C2009C2413 /* MapKit.framework in Frameworks */,
+				713A92BC1EBA5E6F009C2413 /* ParseUI.framework in Frameworks */,
 				713A92A81EB7B638009C2413 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,11 +118,10 @@
 		713A929D1EB7B2D7009C2413 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				713A92BB1EBA5E6F009C2413 /* ParseUI.framework */,
 				713A92AF1EB7C0C2009C2413 /* MapKit.framework */,
 				713A92A51EB7B638009C2413 /* Bolts.framework */,
 				713A92A61EB7B638009C2413 /* Parse.framework */,
-				713A929E1EB7B2D7009C2413 /* Bolts.framework */,
-				713A929F1EB7B2D7009C2413 /* Parse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,6 +142,8 @@
 			children = (
 				713A92B41EB9221C009C2413 /* LocationController.h */,
 				713A92B51EB9221C009C2413 /* LocationController.m */,
+				713A92B81EBA465D009C2413 /* Reminder.h */,
+				713A92B91EBA465D009C2413 /* Reminder.m */,
 				713A92B71EB9241E009C2413 /* LocationControllerDelegate.h */,
 				713A92891EB7ACF6009C2413 /* AppDelegate.h */,
 				713A928A1EB7ACF6009C2413 /* AppDelegate.m */,
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				713A92B61EB9221C009C2413 /* LocationController.m in Sources */,
+				713A92BA1EBA465D009C2413 /* Reminder.m in Sources */,
 				713A92B31EB8FF1F009C2413 /* AddReminderViewController.m in Sources */,
 				713A928E1EB7ACF6009C2413 /* ViewController.m in Sources */,
 				713A928B1EB7ACF6009C2413 /* AppDelegate.m in Sources */,
@@ -363,6 +369,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LocationReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -379,6 +386,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LocationReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
