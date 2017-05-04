@@ -8,6 +8,7 @@
 
 #import "AddReminderViewController.h"
 #import "Reminder.h"
+#import "LocationController.h"
 
 @interface AddReminderViewController ()
 
@@ -54,6 +55,14 @@
         CGFloat radius = 100; //for lab coming from UISlider/UITextField from the user
         
         MKCircle *circle = [MKCircle circleWithCenterCoordinate:self.coordinate radius:radius];
+        
+        if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+            
+            CLCircularRegion *region = [[CLCircularRegion alloc]initWithCenter:self.coordinate radius:radius identifier:newReminder.name];
+            
+            [LocationController.sharedLocationController startMonitoringForRegion:region];
+            
+        }
         
         self.completion(circle);
         [self.navigationController popViewControllerAnimated:YES];
