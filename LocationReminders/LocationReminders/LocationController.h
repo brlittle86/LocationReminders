@@ -20,4 +20,6 @@
 
 + (id)sharedLocationController;
 
+- (void)startMonitoringForRegion:(CLRegion *)region;
+
 @end

@@ -11,6 +11,7 @@
 #import "AddReminderViewController.h"
 #import "LocationControllerDelegate.h"
 #import "LocationController.h"
+#import "Reminder.h"
 
 @import Parse;
 @import MapKit;
@@ -66,9 +67,29 @@
             NSLog(@"Error Fetching Reminder %@", error.localizedDescription);
         } else {
             NSLog(@"%@", objects);
+            for (Reminder *reminder in objects) {
+                [self allRemindersToMap:reminder];
+            }
+            
         }
     }];
     
+}
+
+-(void)allRemindersToMap:(Reminder *)reminder{
+    BOOL hasAnnotation = NO;
+    for (MKCircle *overlay in self.mapView.overlays) {
+        if ((overlay.coordinate.latitude == reminder.location.latitude) && (overlay.coordinate.longitude == reminder.location.longitude)) {
+            hasAnnotation = YES;
+        }
+    }
+    if (!hasAnnotation) {
+        CGFloat radius = [[reminder radius] floatValue];
+        [[reminder location] latitude];
+        CLLocationCoordinate2DMake([[reminder location] latitude], [[reminder location] longitude]);
+        MKCircle *circle = [MKCircle circleWithCenterCoordinate:CLLocationCoordinate2DMake([[reminder location] latitude], [[reminder location] longitude]) radius:radius];
+        [[self mapView] addOverlay:circle];
+    }
 }
 
 -(void)reminderSavedToParse:(id)sender{
